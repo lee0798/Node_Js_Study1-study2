@@ -1,0 +1,19 @@
+{
+  "name": "nodejsstudy",
+  "version": "1.0.0",
+  "description": "nodejsstudy",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/lee0798/Node_Js_Study.git)"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "underscore": "^1.13.6"
+  }
+}
