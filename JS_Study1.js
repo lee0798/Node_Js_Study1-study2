@@ -1,4 +1,4 @@
-//platform 사용하고 있는 시스템이 어떤 운영체제인지
+/*//platform 사용하고 있는 시스템이 어떤 운영체제인지
 let o = require('os');
 console.log(o.platform());
 
@@ -11,7 +11,7 @@ const port = 1337;
 http.createServer((req, res) => {
  res.writeHead(200, { 'Content-Type': 'text/plain' });
  res.end('Hello World\n');
-}).listen(port, hostnㄹame, () => {
+}).listen(port, hostname, () => {
  console.log(`Server running at http://${hostname}:${port}/`);
 });
 //NPM
@@ -57,7 +57,7 @@ const port = 1337;
 http.createServer((req, res) => {
  res.writeHead(200, { 'Content-Type': 'text/plain' });
  res.end('Hello World\n');
-}).listen(port, hostnㄹame, () => {
+}).listen(port, hostname, () => {
  console.log(`Server running at http://${hostname}:${port}/`);
 });
 //express 활용
@@ -67,15 +67,18 @@ app.use(express.static('public'));
 app.get('/test',function(req,res){
     res.send('');
 });
+
+
 app.get('/',function(req,res){
     res.send('hello home page');
 });
 app.get('/login',function(req,res){
     res.send('login please');
-})
+});
 app.listen(3000,function(){
     console.log('connected 3000 port!');
 });
+
 
 
 
