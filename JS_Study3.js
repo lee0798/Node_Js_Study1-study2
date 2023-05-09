@@ -7,7 +7,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.set('view engine', 'pug');
 app.set('views',__dirname+'/views_file');
 app.get('/topic/new',function(req,res){
-    res.render('new');
+    fs.readdir('data',function(err,files){
+        if(err){
+            console.log(err);
+            res.status(500).send("error");
+        }
+    res.render('new', {topics:files});
+    });
 });
 app.get(['/topic','/topic/:id'],function(req,res){
     fs.readdir('data',function(err,files){
@@ -39,9 +45,10 @@ app.post('/topic',function(req,res){
         if(err){
             res.status(500).send("error");
         }
-        res.send('success'+req.body.title)
+        res.redirect('/topic/'+title)
     })
 })
 app.listen(3000, function(){
     console.log('connected 3000port!' );
 });
+/*e도환*/
